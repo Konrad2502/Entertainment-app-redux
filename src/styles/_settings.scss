@@ -1,0 +1,33 @@
+$red: rgb(252,71,71);
+$dark: rgb(16,20,30);
+$steel-blue: rgb(90,105,143);
+$dark-blue: rgb(22,29,47);
+$white: rgb(255,255,255);
+
+$default-font:  "Outfit", serif;
+
+@mixin heading-large {
+    font-size: 32px;
+    color: $white;
+}
+
+@mixin heading-medium {
+    font-size: 24px;
+    color: $white;
+}
+@mixin heading-small {
+    font-size: 18px;
+    color: $white;
+}
+@mixin body-medium {
+    font-size: 15px;
+    font-family: $default-font;
+    color: $white;
+}
+
+@mixin body-small {
+    font-size: 12px;
+    font-family: $default-font;
+    color: $white;
+}
+
