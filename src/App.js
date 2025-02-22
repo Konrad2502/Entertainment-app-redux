@@ -7,10 +7,10 @@ import { fetchData } from "./features/dataSlice";
 
 
 function App() {
-  const dispatch = useDispatch(); // Pobieramy funkcję do wysyłania akcji
+  const dispatch = useDispatch(); 
 
   useEffect(() => {
-    dispatch(fetchData()); // Pobieramy dane na start
+    dispatch(fetchData()); 
   }, [dispatch]);
 
   return (

@@ -1,11 +1,17 @@
 @import '../../styles/settings';
 
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .home {
     flex: 0 0 93%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 0 20px;
+    gap: 50px;
+   
 }
 
 .home__search {
@@ -34,9 +40,10 @@
 .trending {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     &__title {
-        @include heading-large
+        @include heading-large;
+        font-weight: 300;
     }
 }
 
@@ -86,13 +93,13 @@
     flex-direction: column;
     align-self: flex-end;
     &-title {
-        @include heading-medium
+        @include heading-large
     }
 }
 
 .trending__elements {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     color: $white;
 }
 
@@ -112,4 +119,112 @@
     flex-shrink: 0; 
 }
 
+.recommended {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__title {
+        @include heading-large;
+        font-weight: 300;
+    }
+}
 
+.recommended__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.recommended__item {
+    flex: 0 0 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.recommended__picture {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    &-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(92, 89, 89);
+        cursor: pointer;
+        z-index: 5;
+    }
+    &:hover .recommended__overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.recommended__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.recommended__play {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px 20px;
+    border-radius: 30px;
+   
+    
+}
+
+.recommended__section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &-title {
+        @include heading-small;
+    }
+}
+
+.recommended__details {
+    display: flex;
+    gap: 15px;
+}
+
+.recommended__detail {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    &-icon {
+        width: 12px;
+        height: 12px;
+    }
+}

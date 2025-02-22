@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Asynchroniczne pobieranie danych z `data.json`
+
 export const fetchData = createAsyncThunk("data/fetchData", async () => {
   const response = await fetch("/data.json");
   return response.json();
@@ -22,7 +22,7 @@ const dataSlice = createSlice({
       })
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = false;
-        state.items = action.payload; // Zapisujemy dane w stanie Redux
+        state.items = action.payload; 
       })
       .addCase(fetchData.rejected, (state) => {
         state.loading = false;

@@ -6,6 +6,8 @@ import { ReactComponent as MovieIcon } from '../../assets/icon-category-movie.sv
 import { ReactComponent as TvIcon } from '../../assets/icon-category-tv.svg';
 import { ReactComponent as BookmarkIcon } from '../../assets/icon-nav-bookmark.svg';
 import { ReactComponent as BookmarkEmpty } from '../../assets/icon-bookmark-empty.svg';
+import { ReactComponent as PlayIcon } from '../../assets/icon-play.svg';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,15 +20,19 @@ export default function Home() {
  const trendingItems = useSelector((state) => 
  state.data.items.filter(item => item.isTrending === true)
 );
-console.log(trendingItems)
+
+const everyItems = useSelector(state => state.data.items);
+
+
   return (
-    <div className='home'>
-        <div className="home__search">
+    <div className="content">
+         <div className="home__search">
              <SearchkIcon className='home__search-icon'/>
             <input type="text" className="home__search-input" placeholder='Search for movies or Tv series'/>   
         </div>
+    <div className='home'>
         <div className="trending">
-            <div className="trending__title">Trending</div>
+            <h2 className="trending__title">Trending</h2>
             <Swiper
            modules={[Navigation]}
            spaceBetween={16}
@@ -57,6 +63,37 @@ console.log(trendingItems)
             ))}
             </Swiper>
         </div>
+        <div className="recommended">
+            <div className="recommended__title">Recommended for you</div>
+            <div className="recommended__content">
+                {everyItems.map(item => (
+                    <div key={item.id} className="recommended__item">
+                    <div className="recommended__picture">
+                        <img src={item.thumbnail.regular.small} alt={item.title} className="recommended__picture-img" />
+                        <div className="recommended__picture-icon"><BookmarkEmpty/></div>
+                        <div className="recommended__overlay">
+                        <div className="recommended__play">
+                            <PlayIcon className='recommended__play-icon'/>
+                            <div className="recommended__play-text">Play</div>
+                        </div>
+                        </div>
+                    </div>
+                    <div className="recommended__section">
+                        <div className="recommended__details">
+                            <div className="recommended__detail-year">{item.year}</div>
+                            <div className="recommended__detail">
+                                {item.category === 'Movie' ? ( <MovieIcon className='recommended__detail-icon'/>) : (<TvIcon className='recommended__detail-icon'/>)}
+                                <div className="recommended__detail-category">{item.category}</div>
+                            </div>
+                            <div className="recommended__detail-rating">{item.rating}</div>
+                        </div>
+                        <div className="recommended__section-title">{item.title}</div>
+                    </div>
+                </div>
+                ))}
+            </div>
+        </div>
+    </div>
     </div>
   )
 }
