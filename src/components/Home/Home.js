@@ -1,35 +1,50 @@
 import React from 'react';
-import { ReactComponent as SearchkIcon } from '../../assets/icon-search.svg';
 import './Home.scss';
-import { ReactComponent as HomeIcon } from '../../assets/icon-nav-home.svg';
 import { ReactComponent as MovieIcon } from '../../assets/icon-category-movie.svg';
 import { ReactComponent as TvIcon } from '../../assets/icon-category-tv.svg';
-import { ReactComponent as BookmarkIcon } from '../../assets/icon-nav-bookmark.svg';
 import { ReactComponent as BookmarkEmpty } from '../../assets/icon-bookmark-empty.svg';
+import { ReactComponent as BookmarkFull } from '../../assets/icon-bookmark-full.svg';
 import { ReactComponent as PlayIcon } from '../../assets/icon-play.svg';
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toogleItems } from '../../features/selectedItemsSlice';
+
+
 
 
 export default function Home() {
+
+const dispatch = useDispatch();
+
 
  const trendingItems = useSelector((state) => 
  state.data.items.filter(item => item.isTrending === true)
 );
 
 const everyItems = useSelector(state => state.data.items);
+const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
+const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
+
+
+const isBookmarked = (item) => {
+    if (item.category === 'Movie') {
+        return bookmarkedMovies.some(movie => movie.id === item.id);
+    } else if (item.category === 'TV Series') {
+        return bookmarkedTvSeries.some(series => series.id === item.id);
+    }
+    return false;
+};
+
+const handleBookmarkClick = (item) => {
+    dispatch(toogleItems(item))
+};
+
 
 
   return (
-    <div className="content">
-         <div className="home__search">
-             <SearchkIcon className='home__search-icon'/>
-            <input type="text" className="home__search-input" placeholder='Search for movies or Tv series'/>   
-        </div>
     <div className='home'>
         <div className="trending">
             <h2 className="trending__title">Trending</h2>
@@ -57,7 +72,12 @@ const everyItems = useSelector(state => state.data.items);
                         </div>
                         <div className="trending__section-title">{item.title}</div>
                     </div>
-                    <div className="trending__item-icon"><BookmarkEmpty/></div>
+                    <div             
+                    className="trending__item-icon"
+                    onClick={() => handleBookmarkClick(item)}
+                    >
+                    {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}           
+                    </div>
                 </div>
                 </SwiperSlide>
             ))}
@@ -70,7 +90,11 @@ const everyItems = useSelector(state => state.data.items);
                     <div key={item.id} className="recommended__item">
                     <div className="recommended__picture">
                         <img src={item.thumbnail.regular.small} alt={item.title} className="recommended__picture-img" />
-                        <div className="recommended__picture-icon"><BookmarkEmpty/></div>
+                        <div 
+                        onClick={() => handleBookmarkClick(item)}
+                        className="recommended__picture-icon">
+                              {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}
+                            </div>
                         <div className="recommended__overlay">
                         <div className="recommended__play">
                             <PlayIcon className='recommended__play-icon'/>
@@ -94,6 +118,6 @@ const everyItems = useSelector(state => state.data.items);
             </div>
         </div>
     </div>
-    </div>
+   
   )
 }

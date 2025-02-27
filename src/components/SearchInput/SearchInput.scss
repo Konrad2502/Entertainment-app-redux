@@ -1,0 +1,28 @@
+@import '../../styles/settings';
+
+.home__search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-icon {
+        width: 32px;
+        height: 32px;
+    }
+    &-input {
+       background-color: $dark-blue;
+       flex: 0 0 96%;
+       height: 25px;
+       border: none;
+       font-size: 15px;
+       color: $white;
+       outline: none;
+       border-bottom: 2px solid transparent;
+       &::placeholder {
+        color: $steel-blue; 
+     }
+
+     &:focus {
+        border-bottom: 1px solid $white; 
+     }
+    }
+}

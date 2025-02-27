@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Movie from "./components/Movie/Movie";
 import TvSeries from "./components/TvSeries/TvSeries";
 import Bookmark from "./components/Bookmark/Bookmark";
+import Content from "./components/Content/Content";
+import SearchInput from "./components/SearchInput/SearchInput";
 
 
 function App() {
@@ -22,12 +24,15 @@ function App() {
     <Router>
     <Container>
       <Nav/>
+      <Content>
+        <SearchInput/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/movie" element={<Movie/>}/>
         <Route path="/tvseries" element={<TvSeries/>}/>
         <Route path="/bookmark" element={<Bookmark/>}/>
       </Routes>
+      </Content>
     </Container>
     </Router>
    
