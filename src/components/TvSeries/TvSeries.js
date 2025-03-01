@@ -18,6 +18,11 @@ export default function TvSeries() {
         )
       const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
       const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
+       const searchQuery = useSelector(state => state.search);
+        const filteredTvseries = tvseriesItems.filter(item =>
+              item.title.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+
 
       const isBookmarked = (item) => {
           if (item.category === 'Movie') {
@@ -37,7 +42,7 @@ export default function TvSeries() {
     <div className="tvseries">
                     <div className="tvseries__title">TV Series</div>
                     <div className="tvseries__content">
-                        {tvseriesItems.map(item => (
+                        {filteredTvseries.map(item => (
                             <div key={item.id} className="tvseries__item">
                             <div className="tvseries__picture">
                                 <img src={item.thumbnail.regular.small} alt={item.title} className="tvseries__picture-img" />

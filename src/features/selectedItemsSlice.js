@@ -27,10 +27,18 @@ const selectedItemsSlice = createSlice({
                 }
             }
         },
-        removeAll: (state) => {
-            state.movies = [];
+        removeAll: (state, action) => {
+            const category = action.payload;
+            console.log(category)
+
+            if (category === 'Movie') {
+                state.movies = [];
+            }
+          else if (category === 'TV Series') {
             state.tvseries = []
         }
+          }
+           
 
     }
 });

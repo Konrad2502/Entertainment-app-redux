@@ -27,7 +27,10 @@ const dispatch = useDispatch();
 const everyItems = useSelector(state => state.data.items);
 const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
 const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
-
+const searchQuery = useSelector(state => state.search);
+const filteredItems = everyItems.filter(item =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+)
 
 const isBookmarked = (item) => {
     if (item.category === 'Movie') {
@@ -86,7 +89,7 @@ const handleBookmarkClick = (item) => {
         <div className="recommended">
             <div className="recommended__title">Recommended for you</div>
             <div className="recommended__content">
-                {everyItems.map(item => (
+                {filteredItems.map(item => (
                     <div key={item.id} className="recommended__item">
                     <div className="recommended__picture">
                         <img src={item.thumbnail.regular.small} alt={item.title} className="recommended__picture-img" />

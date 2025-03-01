@@ -21,6 +21,11 @@ export default function Movie() {
     )
     const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
     const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
+
+    const searchQuery = useSelector(state => state.search);
+    const filteredMovies = movieItems.filter(item =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
    
     const isBookmarked = (item) => {
         if (item.category === 'Movie') {
@@ -38,7 +43,7 @@ export default function Movie() {
     <div className="movie">
                 <div className="movie__title">Movies</div>
                 <div className="movie__content">
-                    {movieItems.map(item => (
+                    {filteredMovies.length === 0 ? <div>Movies not found</div> : filteredMovies.map(item => (
                         <div key={item.id} className="movie__item">
                         <div className="movie__picture">
                             <img src={item.thumbnail.regular.small} alt={item.title} className="movie__picture-img" />
@@ -67,6 +72,7 @@ export default function Movie() {
                         </div>
                     </div>
                     ))}
+                    {}
                 </div>
             </div>
   )
