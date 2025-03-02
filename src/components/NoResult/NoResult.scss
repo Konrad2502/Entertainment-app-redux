@@ -1,0 +1,13 @@
+@import '../../styles/settings';
+
+.no__result {
+    margin: 0 auto;
+    text-align: center;
+    &-logo {
+        height: 350px;
+        width: 750px;
+    }
+    &-txt {
+        @include heading-large;
+    }
+}

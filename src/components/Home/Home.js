@@ -4,13 +4,15 @@ import { ReactComponent as MovieIcon } from '../../assets/icon-category-movie.sv
 import { ReactComponent as TvIcon } from '../../assets/icon-category-tv.svg';
 import { ReactComponent as BookmarkEmpty } from '../../assets/icon-bookmark-empty.svg';
 import { ReactComponent as BookmarkFull } from '../../assets/icon-bookmark-full.svg';
-import { ReactComponent as PlayIcon } from '../../assets/icon-play.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { toogleItems } from '../../features/selectedItemsSlice';
+import NoResult from '../NoResult/NoResult';
+import HomeItem from './HomeItem';
+import { useMemo } from 'react';
 
 
 
@@ -20,10 +22,8 @@ export default function Home() {
 const dispatch = useDispatch();
 
 
- const trendingItems = useSelector((state) => 
- state.data.items.filter(item => item.isTrending === true)
-);
-
+const items = useSelector(state => state.data.items);
+const trendingItems = useMemo(() => items.filter(item => item.isTrending === true), [items]);
 const everyItems = useSelector(state => state.data.items);
 const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
 const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
@@ -89,34 +89,8 @@ const handleBookmarkClick = (item) => {
         <div className="recommended">
             <div className="recommended__title">Recommended for you</div>
             <div className="recommended__content">
-                {filteredItems.map(item => (
-                    <div key={item.id} className="recommended__item">
-                    <div className="recommended__picture">
-                        <img src={item.thumbnail.regular.small} alt={item.title} className="recommended__picture-img" />
-                        <div 
-                        onClick={() => handleBookmarkClick(item)}
-                        className="recommended__picture-icon">
-                              {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}
-                            </div>
-                        <div className="recommended__overlay">
-                        <div className="recommended__play">
-                            <PlayIcon className='recommended__play-icon'/>
-                            <div className="recommended__play-text">Play</div>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="recommended__section">
-                        <div className="recommended__details">
-                            <div className="recommended__detail-year">{item.year}</div>
-                            <div className="recommended__detail">
-                                {item.category === 'Movie' ? ( <MovieIcon className='recommended__detail-icon'/>) : (<TvIcon className='recommended__detail-icon'/>)}
-                                <div className="recommended__detail-category">{item.category}</div>
-                            </div>
-                            <div className="recommended__detail-rating">{item.rating}</div>
-                        </div>
-                        <div className="recommended__section-title">{item.title}</div>
-                    </div>
-                </div>
+                {filteredItems.length === 0 ? <NoResult/> : filteredItems.map(item => (
+                   <HomeItem key={item.id} item={item}/>
                 ))}
             </div>
         </div>
