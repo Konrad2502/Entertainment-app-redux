@@ -21,10 +21,8 @@ export default function Home() {
 
 const dispatch = useDispatch();
 
-
-const items = useSelector(state => state.data.items);
-const trendingItems = useMemo(() => items.filter(item => item.isTrending === true), [items]);
 const everyItems = useSelector(state => state.data.items);
+const trendingItems = useMemo(() => everyItems.filter(item => item.isTrending === true), [everyItems]);
 const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
 const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
 const searchQuery = useSelector(state => state.search);

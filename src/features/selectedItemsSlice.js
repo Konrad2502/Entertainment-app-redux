@@ -29,8 +29,6 @@ const selectedItemsSlice = createSlice({
         },
         removeAll: (state, action) => {
             const category = action.payload;
-            console.log(category)
-
             if (category === 'Movie') {
                 state.movies = [];
             }

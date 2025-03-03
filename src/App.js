@@ -10,6 +10,7 @@ import TvSeries from "./components/TvSeries/TvSeries";
 import Bookmark from "./components/Bookmark/Bookmark";
 import Content from "./components/Content/Content";
 import SearchInput from "./components/SearchInput/SearchInput";
+import SignModal from "./components/SingModal/SignModal";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       </Routes>
       </Content>
     </Container>
+    <SignModal/>
     </Router>
    
   );
