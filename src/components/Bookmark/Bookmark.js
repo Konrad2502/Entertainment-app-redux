@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import BookmarkMovie from './BookmarkMovie';
 import BookmarkTV from './BookmarkTV';
+import { setCurrentItem } from '../../features/currentItemSlice';
 
 
-export default function Bookmark() {
+export default function Bookmark({setIsItemVisible}) {
 
     const dispatch = useDispatch();
  
@@ -28,6 +29,11 @@ export default function Bookmark() {
         dispatch(removeAll(category))
     }
 
+     const handleCurrentItem = (item) => {
+            dispatch(setCurrentItem(item));
+            setIsItemVisible(true)
+        }
+
    
   return (
     <div className='bookmark'>
@@ -38,7 +44,10 @@ export default function Bookmark() {
                             <FontAwesomeIcon className='bookmark-movie__empty-icon' icon={faFolderOpen} />
                             Movie list is empty</div> :
                             bookMarkMovies.map(item => (
-                              <BookmarkMovie key={item.id} item={item}/>
+                              <BookmarkMovie 
+                              handleCurrentItem={handleCurrentItem}
+                              key={item.id} 
+                              item={item}/>
                             ))
                         }
                     </div>
@@ -56,7 +65,10 @@ export default function Bookmark() {
                             <FontAwesomeIcon className='bookmark-tvseries__empty-icon' icon={faFolderOpen} />
                             Tvseries list is empty 
                         </div> : bookMarkTvseries.map(item => (
-                            <BookmarkTV key={item.id} item={item}/>
+                            <BookmarkTV 
+                            handleCurrentItem={handleCurrentItem}
+                            key={item.id} 
+                            item={item}/>
                         ))}
                     </div>
                     {bookMarkTvseries.length !== 0 ? 

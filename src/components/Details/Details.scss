@@ -1,0 +1,83 @@
+@import '../../styles/settings';
+
+.details {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: $dark;
+}
+
+.details__img {
+    width: 100%;
+    height: 300px;
+    &-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.details__items {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.details__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   
+}
+
+.details__title {
+    @include heading-medium;
+    padding: 0 20px;
+}
+
+.details__stars {
+    padding: 0 20px;
+}
+
+.details__description {
+    padding:  20px;
+}
+
+.details__btn {
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: $steel-blue;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+        background-color: #162449;
+    }
+}
+
+.details__leyer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0, 0.7);
+    opacity: 0;
+}
+
+.details__leyer--visible {
+    opacity: 1;
+}

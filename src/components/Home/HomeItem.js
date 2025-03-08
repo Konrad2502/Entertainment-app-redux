@@ -7,14 +7,14 @@ import { ReactComponent as PlayIcon } from '../../assets/icon-play.svg';
 import { useDispatch, useSelector } from "react-redux";
 import { toogleItems } from '../../features/selectedItemsSlice';
 
-export default function HomeItem({item}) {
+export default function HomeItem({item, onClick}) {
 
    const dispatch = useDispatch();
 
    const bookmarkedMovies = useSelector(state => state.selectedItems.movies);
    const bookmarkedTvSeries = useSelector(state => state.selectedItems.tvseries);
 
-    const isBookmarked = (item) => {
+    const isBookmarked = (item,) => {
         if (item.category === 'Movie') {
             return bookmarkedMovies.some(movie => movie.id === item.id);
         } else if (item.category === 'TV Series') {
@@ -23,18 +23,20 @@ export default function HomeItem({item}) {
         return false;
     };
     
-    const handleBookmarkClick = (item) => {
+    const handleBookmarkClick = (event,item) => {
+        event.stopPropagation();
         dispatch(toogleItems(item))
     };
-    
 
-
+  
   return (
-    <div className="recommended__item">
+    <div
+    onClick={onClick}  
+    className="recommended__item">
     <div className="recommended__picture">
         <img src={item.thumbnail.regular.small} alt={item.title} className="recommended__picture-img" />
         <div 
-        onClick={() => handleBookmarkClick(item)}
+        onClick={(e) => handleBookmarkClick(e,item)}
         className="recommended__picture-icon">
               {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}
             </div>

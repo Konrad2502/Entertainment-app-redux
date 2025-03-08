@@ -10,15 +10,20 @@ import { useDispatch } from "react-redux";
  
  
 
-export default function BookmarkMovie({item}) {
+export default function BookmarkMovie({item, handleCurrentItem}) {
 
     const dispatch = useDispatch();
 
-    const handleBookmarkClick = (item) => {
+    const handleBookmarkClick = (event,item) => {
+      event.stopPropagation()
         dispatch(toogleItems(item))
     };
+    
+  
   return (
-    <div className="bookmark-movie__item">
+    <div 
+    onClick={() => handleCurrentItem(item)}
+    className="bookmark-movie__item">
       <div className="bookmark-movie__picture">
         <img
           src={item.thumbnail.regular.small}
@@ -26,7 +31,7 @@ export default function BookmarkMovie({item}) {
           className="movie__picture-img"
         />
         <div
-          onClick={() => handleBookmarkClick(item)}
+          onClick={(e) => handleBookmarkClick(e,item)}
           className="bookmark-movie__picture-icon"
         >
           <BookmarkFull />

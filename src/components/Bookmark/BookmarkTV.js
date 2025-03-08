@@ -9,19 +9,22 @@ import { useDispatch } from "react-redux";
 
 
  
- export default function BookmarkTV({item}) {
+ export default function BookmarkTV({item, handleCurrentItem}) {
 
     const dispatch = useDispatch();
 
-    const handleBookmarkClick = (item) => {
+    const handleBookmarkClick = (event,item) => {
+        event.stopPropagation();
         dispatch(toogleItems(item))
     };
    return (
-    <div className="bookmark-tvseries__item">
+    <div 
+    onClick={() => handleCurrentItem(item)}
+    className="bookmark-tvseries__item">
     <div className="bookmark-tvseries__picture">
         <img src={item.thumbnail.regular.small} alt={item.title} className="movie__picture-img" />
         <div 
-         onClick={() => handleBookmarkClick(item)}
+         onClick={(e) => handleBookmarkClick(e,item)}
         className="bookmark-tvseries__picture-icon"><BookmarkFull/></div>
         <div className="bookmark-tvseries__overlay">
         <div className="bookmark-tvseries__play">

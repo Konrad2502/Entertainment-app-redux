@@ -13,11 +13,12 @@ import { toogleItems } from '../../features/selectedItemsSlice';
 import NoResult from '../NoResult/NoResult';
 import HomeItem from './HomeItem';
 import { useMemo } from 'react';
+import { setCurrentItem } from '../../features/currentItemSlice';
 
 
 
 
-export default function Home() {
+export default function Home({setIsItemVisible}) {
 
 const dispatch = useDispatch();
 
@@ -39,9 +40,15 @@ const isBookmarked = (item) => {
     return false;
 };
 
-const handleBookmarkClick = (item) => {
+const handleBookmarkClick = (event,item) => {
+    event.stopPropagation();
     dispatch(toogleItems(item))
 };
+
+const handleCurrentItem = (item) => {
+    dispatch(setCurrentItem(item));
+    setIsItemVisible(true)
+}
 
 
 
@@ -59,7 +66,9 @@ const handleBookmarkClick = (item) => {
           className="trending__content"
         >
             {trendingItems.map(item => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide 
+                onClick={() => handleCurrentItem(item)}
+                key={item.id}>
                       <div className="trending__item">
                     <img src={item.thumbnail.trending.large} alt={item.title} className="trending__item-img" />
                     <div className="trending__section">
@@ -75,7 +84,7 @@ const handleBookmarkClick = (item) => {
                     </div>
                     <div             
                     className="trending__item-icon"
-                    onClick={() => handleBookmarkClick(item)}
+                    onClick={(e) => handleBookmarkClick(e,item)}
                     >
                     {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}           
                     </div>
@@ -88,7 +97,9 @@ const handleBookmarkClick = (item) => {
             <div className="recommended__title">Recommended for you</div>
             <div className="recommended__content">
                 {filteredItems.length === 0 ? <NoResult/> : filteredItems.map(item => (
-                   <HomeItem key={item.id} item={item}/>
+                   <HomeItem
+                   onClick={() => handleCurrentItem(item)}
+                   key={item.id} item={item}/>
                 ))}
             </div>
         </div>

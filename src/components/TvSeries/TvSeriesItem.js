@@ -7,7 +7,7 @@ import { ReactComponent as BookmarkFull } from '../../assets/icon-bookmark-full.
 import { useSelector, useDispatch } from "react-redux";
 import { toogleItems } from '../../features/selectedItemsSlice';
 
-export default function TvSeriesItem({item}) {
+export default function TvSeriesItem({item,onClick}) {
 
  const dispatch = useDispatch();
 
@@ -23,16 +23,19 @@ export default function TvSeriesItem({item}) {
             return false;
         };
         
-        const handleBookmarkClick = (item) => {
-            dispatch(toogleItems(item))
-        };
+         const handleBookmarkClick = (event,item) => {
+                event.stopPropagation();
+                dispatch(toogleItems(item))     
+            };
 
   return (
-    <div  className="tvseries__item">
+    <div 
+    onClick={onClick}
+    className="tvseries__item">
     <div className="tvseries__picture">
         <img src={item.thumbnail.regular.small} alt={item.title} className="tvseries__picture-img" />
         <div 
-        onClick={() => handleBookmarkClick(item)}
+        onClick={(e) => handleBookmarkClick(e,item)}
         className="tvseries__picture-icon">
             {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}
             </div>

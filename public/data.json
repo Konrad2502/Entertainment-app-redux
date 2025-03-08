@@ -17,7 +17,9 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": true
+    "isTrending": true,
+    "stars": "4",
+    "description": "Beyond Earth is a sci-fi adventure about a team of astronauts who embark on a mission to explore a distant planet, only to uncover a shocking secret that challenges humanity’s understanding of the universe. As they fight for survival, they must decide whether to return home or embrace the unknown."
   },
   {
     "title": "Bottom Gear",
@@ -37,7 +39,9 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": true
+    "isTrending": true,
+     "stars": "3",
+     "description": "Bottom Gear is a parody of the popular car show, featuring chaotic reviews, absurd challenges, and over-the-top humor. With reckless driving and nonsensical commentary, it turns automotive journalism into pure comedy."
   },
   {
     "title": "Undiscovered Cities",
@@ -57,7 +61,9 @@
     "category": "TV Series",
     "rating": "E",
     "isBookmarked": false,
-    "isTrending": true
+    "isTrending": true,
+     "stars": "4",
+     "description": "Undiscovered Cities is a documentary that explores lost and hidden civilizations, uncovering ancient secrets buried beneath modern landscapes. Through cutting-edge technology and expert insights, it reveals the mysteries of forgotten urban worlds."
   },
   {
     "title": "1998",
@@ -77,7 +83,9 @@
     "category": "Movie",
     "rating": "18+",
     "isBookmarked": false,
-    "isTrending": true
+    "isTrending": true,
+     "stars": "3",
+     "description": "1998 is a suspenseful drama that follows a group of strangers whose lives become intertwined during a year of global change and personal turmoil. As they navigate love, loss, and unexpected challenges, their choices shape the course of their futures in ways they never imagined."
   },
   {
     "title": "Dark Side of the Moon",
@@ -97,7 +105,10 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": true,
-    "isTrending": true
+    "isTrending": true,
+     "stars": "5",
+     "description": "Dark Side of the Moon is a sci-fi thriller about a space mission that uncovers a hidden secret on the far side of the Moon. As the crew investigates, they face mysterious forces that challenge their understanding of reality and survival."
+
   },
   {
     "title": "The Great Lands",
@@ -113,7 +124,9 @@
     "category": "Movie",
     "rating": "E",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "2",
+     "description": "The Great Lands is an epic adventure film set in a vast and untamed world where rival kingdoms battle for dominance. As war looms, a group of unlikely heroes must unite to restore peace and uncover the land’s hidden secrets."
   },
   {
     "title": "The Diary",
@@ -129,7 +142,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3",
+     "description": "The Diary is a heartfelt drama about a lost journal that connects strangers across time, revealing deep secrets and untold love stories. As the past and present intertwine, its readers must confront their own emotions and choices."
   },
   {
     "title": "Earth’s Untouched",
@@ -145,7 +160,9 @@
     "category": "Movie",
     "rating": "18+",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Earth’s Untouched is a breathtaking documentary that explores the last pristine landscapes on the planet, untouched by human civilization. Through stunning visuals and compelling narratives, it highlights the beauty and fragility of nature in its purest form."
   },
   {
     "title": "No Land Beyond",
@@ -161,7 +178,9 @@
     "category": "Movie",
     "rating": "E",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "No Land Beyond is a post-apocalyptic thriller set in a world where humanity has been forced to venture beyond the known lands in search of survival. As explorers push into the unknown, they uncover hidden dangers and a truth that challenges everything they believed about their past."
   },
   {
     "title": "During the Hunt",
@@ -177,7 +196,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "During the Hunt is a tense thriller that follows a group of hunters who become the hunted after venturing into a remote wilderness. As they struggle to survive, they realize that something far more dangerous than they expected is stalking them."
   },
   {
     "title": "Autosport the Series",
@@ -193,7 +214,9 @@
     "category": "TV Series",
     "rating": "18+",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "Autosport: The Series is a high-octane documentary that takes viewers behind the scenes of the world’s most intense motorsport competitions. Featuring exclusive interviews, breathtaking race footage, and in-depth analysis, it showcases the passion, speed, and drama of professional racing."
   },
   {
     "title": "Same Answer II",
@@ -209,7 +232,9 @@
     "category": "Movie",
     "rating": "E",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "2",
+     "description": "Same Answer II is a psychological thriller sequel that delves deeper into the mystery of a mind-bending experiment where participants must repeatedly choose between identical options. As the stakes rise, they begin to question reality, free will, and the true purpose of the test."
   },
   {
     "title": "Below Echo",
@@ -225,7 +250,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "1",
+     "description": "Below Echo is a sci-fi mystery thriller about a scientist who discovers strange sound waves emanating from deep underground. As she investigates, she uncovers a hidden truth that could change humanity’s understanding of the past—and its future."
   },
   {
     "title": "The Rockies",
@@ -241,7 +268,9 @@
     "category": "TV Series",
     "rating": "E",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3",
+     "description": "The Rockies is a breathtaking documentary that explores the rugged beauty, diverse wildlife, and rich history of North America's iconic mountain range. Through stunning cinematography and expert insights, it captures the untamed spirit of the wilderness and the people who call it home."
   },
   {
     "title": "Relentless",
@@ -257,7 +286,9 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Relentless is an intense action thriller about a determined protagonist who refuses to give up in the face of overwhelming odds. As they race against time, their unyielding pursuit of justice leads to shocking revelations and high-stakes confrontations."
   },
   {
     "title": "Community of Ours",
@@ -273,7 +304,9 @@
     "category": "TV Series",
     "rating": "18+",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "Community of Ours is a heartfelt drama that explores the lives of residents in a small town as they navigate friendships, conflicts, and shared dreams. Through moments of joy and hardship, they discover the true meaning of belonging and unity."
   },
   {
     "title": "Van Life",
@@ -289,7 +322,9 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Van Life is a documentary that follows the journey of individuals who trade traditional living for a life on the road, embracing freedom, adventure, and minimalism. Through breathtaking landscapes and personal stories, it explores the challenges and rewards of a nomadic lifestyle."
   },
   {
     "title": "The Heiress",
@@ -305,7 +340,9 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "The Heiress is a gripping drama about a young woman who unexpectedly inherits a vast fortune, only to find herself entangled in a web of deception, greed, and family secrets. As she navigates the treacherous world of wealth and power, she must decide who she can truly trust."
   },
   {
     "title": "Off the Track",
@@ -321,7 +358,9 @@
     "category": "Movie",
     "rating": "18+",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Off the Track is a high-stakes sports drama following a once-promising racer who, after a devastating setback, must fight to reclaim his place in the world of competitive motorsport. As he battles personal demons and fierce rivals, he discovers that the road to redemption is more challenging than any race he’s ever faced."
   },
   {
     "title": "Whispering Hill",
@@ -337,7 +376,9 @@
     "category": "Movie",
     "rating": "E",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3",
+     "description": "Whispering Hill is a chilling horror thriller about a small town haunted by eerie whispers coming from a nearby hill. As a group of locals investigates the sinister mystery, they uncover a dark secret that has been buried for generations."
   },
   {
     "title": "112",
@@ -353,7 +394,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "2",
+     "description": "112 is an intense action thriller following emergency responders as they race against time to save lives in the face of a citywide crisis. As chaos unfolds, they must make impossible choices that test their courage, skill, and resilience."
   },
   {
     "title": "Lone Heart",
@@ -369,7 +412,9 @@
     "category": "Movie",
     "rating": "E",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Lone Heart is a touching drama about a solitary traveler searching for meaning and connection in a world that feels distant. Along the way, unexpected encounters challenge their past and open the door to a future they never imagined."
   },
   {
     "title": "Production Line",
@@ -385,7 +430,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3",
+     "description": "Production Line is a gripping industrial thriller that follows workers in a high-tech manufacturing plant as they uncover a dangerous secret hidden within their routine tasks. As tensions rise and automation takes over, they must fight to expose the truth before it's too late."
   },
   {
     "title": "Dogs",
@@ -401,7 +448,9 @@
     "category": "TV Series",
     "rating": "E",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "Dogs is an emotional drama that explores the deep bond between humans and their canine companions. Through interconnected stories, it showcases loyalty, love, and the life-changing impact that dogs have on their owners."
   },
   {
     "title": "Asia in 24 Days",
@@ -417,7 +466,9 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Asia in 24 Days is a breathtaking travel documentary that follows an adventurer’s journey across diverse landscapes, cultures, and cities of Asia in just 24 days. From bustling metropolises to remote hidden gems, the series captures the beauty, history, and traditions of the continent."
   },
   {
     "title": "The Tasty Tour",
@@ -433,7 +484,10 @@
     "category": "TV Series",
     "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3",
+     "description": "The Tasty Tour is a mouthwatering travel and food documentary that takes viewers on a global journey to discover the world’s most delicious dishes. From street food to fine dining, each episode explores local flavors, culinary traditions, and the passionate chefs behind them."
+
   },
   {
     "title": "Darker",
@@ -449,7 +503,9 @@
     "category": "Movie",
     "rating": "18+",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "5",
+     "description": "Darker is a psychological thriller about a man who becomes entangled in a web of secrets and deception while uncovering the truth about his mysterious past. As he digs deeper, he realizes that some shadows are impossible to escape."
   },
   {
     "title": "Unresolved Cases",
@@ -465,7 +521,9 @@
     "category": "TV Series",
     "rating": "18+",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "4",
+     "description": "Unresolved Cases is a gripping true crime documentary series that delves into mysterious unsolved investigations, examining evidence, theories, and new leads. Through expert analysis and firsthand accounts, it seeks to uncover the truth behind cases that have baffled investigators for years."
   },
   {
     "title": "Mission: Saturn",
@@ -481,6 +539,8 @@
     "category": "Movie",
     "rating": "PG",
     "isBookmarked": true,
-    "isTrending": false
+    "isTrending": false,
+     "stars": "3", 
+     "description": "Mission: Saturn is a thrilling sci-fi adventure following a team of astronauts on a groundbreaking mission to explore Saturn and its mysterious moons. As they uncover shocking discoveries, they must survive the dangers of deep space and the secrets hidden within the planet’s rings."
   }
 ]

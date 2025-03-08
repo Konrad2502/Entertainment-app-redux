@@ -9,7 +9,7 @@ import { useDispatch} from 'react-redux';
 import { toogleItems } from '../../features/selectedItemsSlice';
 
 
-export default function MovieItem({item}) {
+export default function MovieItem({item, onClick}) {
 
      const dispatch = useDispatch();
 
@@ -25,16 +25,20 @@ export default function MovieItem({item}) {
                 return false;
             };
             
-            const handleBookmarkClick = (item) => {
+            const handleBookmarkClick = (event,item) => {
+                event.stopPropagation();
                 dispatch(toogleItems(item))
+                
             };
 
   return (
-    <div key={item.id} className="movie__item">
+    <div 
+    onClick={onClick}
+    className="movie__item">
     <div className="movie__picture">
         <img src={item.thumbnail.regular.small} alt={item.title} className="movie__picture-img" />
         <div 
-        onClick={() => handleBookmarkClick(item)}
+        onClick={(e) => handleBookmarkClick(e,item)}
         className="movie__picture-icon">
              {isBookmarked(item) ? <BookmarkFull /> : <BookmarkEmpty />}   
             </div>
