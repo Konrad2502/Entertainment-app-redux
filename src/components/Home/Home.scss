@@ -269,6 +269,7 @@
 }
 }
 
+
 @media (max-width: 390px) {
     .trending__content {
         width: 373px;
@@ -276,6 +277,16 @@
 
     .trending__item {
         width: 368px;
+}
+}
+
+@media (max-width: 375px) {
+    .trending__content {
+        width: 358px;
+    }
+
+    .trending__item {
+        width: 353px;
 }
 }
 
