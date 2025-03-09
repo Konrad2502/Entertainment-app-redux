@@ -258,6 +258,10 @@
     .recommended__details {
         gap: 10px;
     }
+    .trending {
+        display: none;
+        visibility: hidden;
+    }
 }
 @media (max-width: 414px) {
     .trending__content {
