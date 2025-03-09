@@ -85,11 +85,8 @@
 @media (max-width: 480px) {
     .details {
         width: 300px;
+        max-height :520px;
+        gap: 10px;
     }
 }
 
-@media (max-width: 375px) {
-    .details {
-        max-height: 600px;
-    }
-} 
