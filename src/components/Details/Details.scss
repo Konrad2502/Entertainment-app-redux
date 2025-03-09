@@ -58,7 +58,7 @@
     color: $white;
     font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.3ghghs ease-in;
     &:hover {
         background-color: #162449;
     }
@@ -81,3 +81,15 @@
 .details__leyer--visible {
     opacity: 1;
 }
+
+@media (max-width: 480px) {
+    .details {
+        width: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .details {
+        max-height: 600px;
+    }
+} 

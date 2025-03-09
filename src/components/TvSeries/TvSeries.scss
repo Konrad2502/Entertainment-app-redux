@@ -112,3 +112,15 @@
         height: 12px;
     }
 }
+
+@media (max-width: 1024px) {
+    .tvseries__item {
+        flex: 1 1 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tvseries__details {
+        gap: 10px;
+    }
+}

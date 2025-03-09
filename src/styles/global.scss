@@ -8,6 +8,10 @@
   }
 
   body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     @include body-medium;
     background-color: $dark-blue;
   }

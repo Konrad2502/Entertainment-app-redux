@@ -267,3 +267,21 @@
     }
 }
 
+
+@media (max-width: 1024px) {
+    .bookmark-tvseries__item {
+        flex: 1 1 30%;
+    }
+    .bookmark-tvseries__item{
+        flex: 1 1 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bookmark-tvseries__details{
+        gap: 10px;
+    }
+    .bookmark-movie__details {
+        gap: 10px;
+    }
+}

@@ -1,29 +1,24 @@
 import React from "react";
-import { ReactComponent as MovieIcon } from '../../assets/icon-category-movie.svg';
-import { ReactComponent as PlayIcon } from '../../assets/icon-play.svg';
-import { ReactComponent as TvIcon } from '../../assets/icon-category-tv.svg';
-import { ReactComponent as BookmarkFull } from '../../assets/icon-bookmark-full.svg';
-import { toogleItems} from '../../features/selectedItemsSlice';
+import { ReactComponent as MovieIcon } from "../../assets/icon-category-movie.svg";
+import { ReactComponent as PlayIcon } from "../../assets/icon-play.svg";
+import { ReactComponent as TvIcon } from "../../assets/icon-category-tv.svg";
+import { ReactComponent as BookmarkFull } from "../../assets/icon-bookmark-full.svg";
+import { toogleItems } from "../../features/selectedItemsSlice";
 import { useDispatch } from "react-redux";
 
+export default function BookmarkMovie({ item, handleCurrentItem }) {
+  const dispatch = useDispatch();
 
- 
- 
+  const handleBookmarkClick = (event, item) => {
+    event.stopPropagation();
+    dispatch(toogleItems(item));
+  };
 
-export default function BookmarkMovie({item, handleCurrentItem}) {
-
-    const dispatch = useDispatch();
-
-    const handleBookmarkClick = (event,item) => {
-      event.stopPropagation()
-        dispatch(toogleItems(item))
-    };
-    
-  
   return (
-    <div 
-    onClick={() => handleCurrentItem(item)}
-    className="bookmark-movie__item">
+    <div
+      onClick={() => handleCurrentItem(item)}
+      className="bookmark-movie__item"
+    >
       <div className="bookmark-movie__picture">
         <img
           src={item.thumbnail.regular.small}
@@ -31,7 +26,7 @@ export default function BookmarkMovie({item, handleCurrentItem}) {
           className="movie__picture-img"
         />
         <div
-          onClick={(e) => handleBookmarkClick(e,item)}
+          onClick={(e) => handleBookmarkClick(e, item)}
           className="bookmark-movie__picture-icon"
         >
           <BookmarkFull />
