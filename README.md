@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+🎬 Entertainment Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a multi-page entertainment web application built with React, Redux, and SCSS. The project includes a login and sign-up system, search functionality, and state management using Redux. It follows the BEM methodology for class naming and is fully responsive across all screen sizes.
 
-## Available Scripts
+🌍 Live Demo
 
-In the project directory, you can run:
+You can view the deployed project here: https://entertainment-film.netlify.app/
 
-### `npm start`
+📸 Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Here’s a preview of the Entertainment Web App:
+![Entertainment Web App Preview](assets/entertainment-preview.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📌 Features
 
-### `npm test`
+✅ Multi-page structure using React Router✅ Redux for efficient state management✅ Fully responsive design with CSS Media Queries✅ BEM methodology for structured and maintainable SCSS✅ Search functionality for filtering entertainment content✅ Authentication system – Login and Sign-up window with access control✅ Modular and reusable components with React Hooks✅ Modern UI/UX design✅ Interactive Swiper Component – Scrollable carousel for browsing movies and TV shows✅ Bookmark System – Add and remove movies/TV shows to favorites✅ Detailed Movie/TV Show Modal – Displays additional information such as rating and description upon selection
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Tech Stack
 
-### `npm run build`
+React – For building UI components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Redux – For global state management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Router – For multi-page navigation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+SCSS – For styling with BEM methodology
 
-### `npm run eject`
+CSS Media Queries – For responsive design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JSON Data – For dynamic content rendering
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Swiper.js – For interactive movie and TV show scrolling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🚀 Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the repository:
 
-## Learn More
+git clone https://github.com/Konrad2502/Entertainment-Web-App.git
+cd Entertainment-Web-App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install
 
-### Code Splitting
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start
 
-### Analyzing the Bundle Size
+Open http://localhost:3000 in your browser to view the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📜 Available Scripts
 
-### Making a Progressive Web App
+npm start – Runs the app in development mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm test – Launches the test runner
 
-### Advanced Configuration
+npm run build – Builds the app for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm run eject – Removes CRA configurations for customization
 
-### Deployment
+📚 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project helped me deepen my knowledge of:
 
-### `npm run build` fails to minify
+🎯 Redux – Managing global state efficiently across components🎯 React Router – Implementing multi-page navigation seamlessly🎯 Authentication – Implementing login and sign-up modals🎯 Reusable Components – Using hooks and props for scalability🎯 SCSS & BEM – Structuring styles for better maintainability🎯 Responsive Design – Ensuring a seamless experience on all devices🎯 Swiper.js – Implementing an interactive movie carousel for better user experience🎯 Dynamic Bookmarking – Allowing users to save and remove movies/TV shows to their favorites🎯 Detailed Movie/TV Show Modals – Enhancing user engagement with additional movie/show details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📬 Contact
+
+If you have any questions, feel free to reach out:
+
+🔗 GitHub: Konrad2502✉️ Email: konrad.litak@gmail.com
+
